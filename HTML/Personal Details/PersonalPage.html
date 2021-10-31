@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../../CSS/Default.css">
+  <link rel="stylesheet" type="text/css" href="../../CSS/PersonalDetails/PersonalPage.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  function passvalues ()
+  {
+    var firstname = document.getElementById("first_name").value;
+  var laststname = document.getElementById("last_name").value;
+  var surburb = document.getElementById("surburb").value;
+  var city = document.getElementById("city").value;
+  var email = document.getElementById("Email").value;
+  var cell = document.getElementById("phone").value;
+  var altanative = document.getElementById("altanative").value;
+  var card = document.getElementById("Card_Holder").value;
+  var cardnumb = document.getElementById("Card_Number").value;
+  
+  localStorage.setItem("First_name", firstname);
+  localStorage.setItem("surname", laststname);
+  localStorage.setItem("surburb", surburb);
+  localStorage.setItem("City", City);
+  localStorage.setItem("email", email);
+  localStorage.setItem("cell", cell);
+  localStorage.setItem("altanative", altanative);
+  localStorage.setItem("card", card);
+  localStorage.setItem("cardnumb", cardnumb);
+  
+  return false;
+  }
+</script>  
+</head>
+
+<body>
+
+ <div class="regform" ><h1>PERSONAL DETAILS</h1></div>
+ <div class="main">
+<form action="confirm_Personal_Details.html" target="_blank" >
+ <div class="name">
+  <h2 >Names</h2>
+  <label class="firstlabel">First name</label>  <br><br><br>
+ <input class="Firstname" type="text" id="first_name"required><br><br>
+ <label class="lastlabel">Last name </label>
+  <input class="lastname" type="text" id="last_name"required>
+ 
+</div>
+
+<h2 class="name"> Title</h2>
+<select class="option" name="title">
+<option disabled="disabled" selected="selected">--select--</option>
+<option>Ms</option>
+<option>Miss</option>
+<option>Mrs</option>
+<option>Mr</option>
+<option>Dr</option>
+</select>
+
+<h2 class="name"> Province</h2>
+<select class="option" name="province"required>
+<option disabled="disabled" selected="selected">--select--</option>
+<option>Gauteng</option>
+<option>Kwazulu-Natal</option>
+<option>Limpopo</option>
+<option>Mpumalanga</option>
+<option>Northern Cape</option>
+<option>North West</option>
+<option>Western Cape</option>
+<option>Eastern Cape</option>
+<option>Free State</option>
+<option>Overseas</option>
+</select>
+
+ <h2 class="name" >Home_Address</h2>
+ <div class="home-adress">
+ <input class="surburb" type="text" id="surburb"required>
+ <label class="suburblabel" style="font-size: 100%;">Address line</label>  
+ </div>
+  <input class="city" type="number" id="city"required>
+  <label class="citylabel">Area code</label>
+
+<h2 class="name"> Email Address</h2>
+<input class="Email" type="email" id="Email">
+
+<h2 class="name"> Cellphone_Number</h2>
+<input class="number" type="number" id="phone"required>
+<label class="phone-number">Cellphone Number</label>
+<input class="altanative" type="number" id="altanative">
+<label class="altanative_cell_number">altanative Number</label>
+
+ <h2 class="name">Bank details</h2>
+ <label class="CardHolderLabel">Card Holder Name</label>  
+ <input class="Card_holder" type="text" id="Card_Holder"required><br><br>
+ 
+  <input class="Card_Number" type="number" id="Card_Number"required>
+  <label class="CardNumberLabel">Card number </label>
+
+<input type="submit" id="button" value="Proceed" />
+
+
+ 
+</form>
+</body>
+</html>
